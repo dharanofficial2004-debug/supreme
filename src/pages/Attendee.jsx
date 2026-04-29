@@ -7,7 +7,7 @@ export default function Attendee() {
     const [stage, setStage] = useState('idle'); // idle, checking, identified, duplicate, processing, success, error
     const [currentId, setCurrentId] = useState(null);
     const [result, setResult] = useState(null);
-    const [scanCount, setScanCount] = useState(0);
+    const [scanCount, setScanCount] = useState(null); // Changed from 0 to null to detect initial fetch
     const [isActive, setIsActive] = useState(false);
     const [errorMsg, setErrorMsg] = useState(null);
 
@@ -117,7 +117,11 @@ export default function Attendee() {
                 </div>
                 <div className={styles.stats}>
                     <div className={styles.statCard}>
-                        <span className={styles.statVal}>{scanCount}</span>
+                        {scanCount === null ? (
+                            <div className={styles.skeletonCount}></div>
+                        ) : (
+                            <span className={styles.statVal}>{scanCount}</span>
+                        )}
                         <span className={styles.statLabel}>Guests In</span>
                     </div>
                     <button onClick={isActive ? stopCamera : startCamera} className={`${styles.powerBtn} ${isActive ? styles.active : ''}`}>
@@ -146,7 +150,6 @@ export default function Attendee() {
                         </div>
                     )}
 
-                    {/* Simple Centered Overlay */}
                     {stage !== 'idle' && (
                         <div className={styles.resultOverlay}>
                             <div className={styles.resultCard}>
