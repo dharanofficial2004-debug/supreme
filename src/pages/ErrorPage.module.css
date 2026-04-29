@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    background: #f8fafc;
+}
+
+.card {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #f1f5f9;
+}
+
+.logo {
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.errorHeader {
+    margin-bottom: 10px;
+}
+
+.errorCode {
+    background: #eff6ff;
+    color: #3b82f6;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 15px;
+}
+
+.message {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 30px;
+}
+
+.actionArea {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #3b82f6;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.btnIcon {
+    font-size: 20px;
+}

@@ -28,27 +28,34 @@
 }
 
 .downloadBtn {
-    padding: 12px 24px;
-    border-radius: 12px;
+    padding: 16px 24px;
+    border-radius: 14px;
     border: none;
     background: var(--primary);
     color: #fff;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 800;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
     transition: all 0.2s;
+    width: 100%;
 }
 
 .downloadBtn:hover:not(:disabled) {
     background: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
 }
 
 .downloadBtn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+@media (min-width: 641px) {
+    .downloadBtn {
+        width: auto;
+    }
 }
 
 /* Progress Section */
