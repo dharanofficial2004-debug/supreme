@@ -1,0 +1,89 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 0;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.brandName {
+  font-weight: 800;
+  font-size: 16px;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.navLink.active {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .brandName {
+    display: none;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .navLink {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
